@@ -1,0 +1,21 @@
+# Asymmetric Matchers
+ean expect.anything({{input}}) 
+ea expect.any({{input}}) constructor
+eac expect.arrayContaining({{input}}) array
+ena expect.not.arrayContaining({{input}})
+ec expect.closeTo({{input}}) number, numDigits?
+eoc expect.objectContaining({{input}}) object
+enoc expect.not.objectContaining({{input}}) object
+esc expect.stringContaining({{input}}) string
+ensc expect.not.stringContaining({{input}}) string
+esm expect.stringMatching({{input}}) string | regexp
+ensm expect.not.stringMatching({{input}}) string | regexp
+
+# Assertion Count
+eat expect.assertions({{input}}) number
+eha expect.hasAssertions{{input}} 
+
+# Extend Utilities
+eae expect.addEqualityTesters{{input}} testers
+eass expect.addSnapshotSerializer{{input}} serializer
+ee expect.extend{{input}} matchers

@@ -1,0 +1,11 @@
+/* eslint-disable react/react-in-jsx-scope */
+
+import {{testFile}} from '../page/{{testFile}}.test.{{type}}';
+
+describe('This is init test', () => {
+    it('Init action', () => {
+        // model
+        // act
+        // expect
+    })
+})

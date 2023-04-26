@@ -1,0 +1,48 @@
+/* eslint-disable react/react-in-jsx-scope */
+
+import { configureStore } from '@reduxjs/toolkit';
+import { getAllByRole, render, screen } from '@testing-library/react';
+import { act } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { rootReducer } from '@client/plugins/store';
+import {{testFile}} from '../page/{{testFile}}.tsx';
+
+const customStore = (initialCount = 0) =>
+    configureStore({
+        reducer: rootReducer,
+        preloadedState: {
+            commonReducer: {
+                isLoading: false,
+                messageAlert: {
+                    message: [],
+                    info: '',
+                    isShowAlert: false,
+                    messageId: '',
+                    type: '',
+                },
+                userInfo: {},
+            },
+        },
+    });
+
+const setupComponent = (initialCount = 0) =>
+    render(
+        <Provider store={customStore(initialCount)}>
+            <{{testFile}} />
+        </Provider>,
+        { wrapper: BrowserRouter },
+    );
+
+// Test init
+it('Init ${{testFile}}', () => {
+    setupComponent(999);
+    const root = screen.findByTestId('root');
+    expect(root).toBeTruthy();
+});
+
+// Mock API Example
+// mockApi(axiosInstance)
+//     .onGet('customers/chats/messages', {
+//         params: { page: 1 },
+//    }).reply(responePageChat);

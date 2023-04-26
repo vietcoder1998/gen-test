@@ -1,0 +1,4 @@
+filePath;name;type;paramester;compentId;expected
+modules/page/chat;check button submit;domEvent;;btn-submit;api-200
+;get file 200;api;;;api-200
+;get file 404;api;;;api-404

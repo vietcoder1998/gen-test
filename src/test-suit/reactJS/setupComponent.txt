@@ -1,0 +1,9 @@
+await act(async () => {
+    setupComponent(
+        responePageChat.output.data,
+        false,
+        false,
+        'blob:http://localhost:3000/94f247fe-b5be-4610-bc05-44b719595e28',
+    );
+});
+

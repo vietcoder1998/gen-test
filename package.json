@@ -1,0 +1,20 @@
+{
+  "name": "gen-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node src/generate.js",
+    "d:s": "node src/destroy-shallow.js",
+    "d:f": "node src/destroy-force.js",
+    "start": "yarn generate"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.8",
+    "dotenv": "^16.0.3",
+    "fast-csv": "^4.3.6"
+  }
+}
